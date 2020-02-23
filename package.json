@@ -1,8 +1,9 @@
 {
   "name": "@prototyp/react-language-switcher",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Set of components for language switching and route localisation",
   "main": "dist/index.js",
+  "homepage": "https://vlaja.github.io/react-language-switcher/?path=/docs/*",
   "repository": "git@github.com:vlaja/react-language-switcher.git",
   "author": "Vlatko Vlahek <vlatko@prototyp.digital>",
   "license": "MIT",
