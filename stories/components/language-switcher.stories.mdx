@@ -1,0 +1,78 @@
+import { Meta, Preview, Props } from '@storybook/addon-docs/blocks';
+import { LanguageProvider, LanguageSwitcher } from 'components';
+
+<Meta title="Components|LanguageSwitcher" />
+
+# LanguageSwitcher
+
+One of the key features of the `react-language-switcher` package is its flexibility when it comes to styling the `<LanguageSwitcher />` component.
+
+It is possible to override the `className` prop for each element, or override the whole component for each element separately, as well as mix and match these combinations.
+
+## Default component
+
+By default, the component is completely unstyled, as we don't want to enforce our opinions on you.
+
+It will render a list in the following html format:
+
+```html
+<ul>
+  <li>
+    <button>default language</button>
+  </li>
+  <li>
+    <button>...additional languages</button>
+  </li>
+</ul>
+```
+
+### Result
+
+<Preview withSource="none">
+  <LanguageProvider config={{ languageList: ['en', 'de', 'fr'] }}>
+    <LanguageSwitcher />
+  </LanguageProvider>
+</Preview>
+
+## Preview
+
+<Preview withSource="none">
+  <LanguageProvider config={{ languageList: ['en', 'de', 'fr'] }}>
+    <LanguageSwitcher
+      containerClassName="language-switcher"
+      listClassName="language-switcher__list"
+      itemClassName="language-switcher__item"
+      buttonClassName="language-switcher__button"
+      buttonActiveClassName="language-switcher__button--active"
+    />
+  </LanguageProvider>
+</Preview>
+
+## Usage
+
+```tsx
+<LanguageProvider>
+  <LanguageSwitcher
+    containerClassName="language-switcher"
+    listClassName="language-switcher__list"
+    itemClassName="language-switcher__item"
+    buttonClassName="language-switcher__button"
+    buttonActiveClassName="language-switcher__button--active"
+  />
+</LanguageProvider>
+```
+
+## Props
+
+<Props of={LanguageSwitcher} />
+
+# Support
+
+We added support for styling via:
+
+- vanilla-css
+- css-modules
+- styled-components
+- other CSS-in-JS frameworks such as emotion or aphrodite
+
+If your solution of choice does not work, let us know and we will gladly take into consideration if we can somehow help you out.

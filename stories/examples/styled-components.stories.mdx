@@ -1,0 +1,83 @@
+import { LanguageSwitcher, LanguageProvider } from 'components';
+import styled from 'styled-components';
+import { Meta, Preview, Props } from '@storybook/addon-docs/blocks';
+
+export const Container = styled.div`
+  background-color: #25aaff;
+`;
+
+export const List = styled.ul`
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  display: flex;
+  list-style: none;
+  padding: 0;
+`;
+
+export const Item = styled.li`
+  margin: 0 8px;
+`;
+
+export const borderBottom = '3px solid white';
+export const Button = styled.button.attrs(props => ({
+  isActive: props['data-current'],
+}))`
+  padding: 24px;
+  background: none;
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  border-bottom: ${props => (props.isActive ? borderBottom : 'none')};
+&:hover {
+border-bottom: \${borderBottom};
+}
+&:active {
+border-bottom: \${borderBottom};
+}
+`;
+
+<Meta title="Examples|styling/styled-components" />
+
+# Styled Components
+
+Styling with Styled Components
+
+## Preview
+
+<Preview withSource="none">
+  <LanguageProvider>
+    <LanguageSwitcher
+      containerComponent={Container}
+      listComponent={List}
+      itemComponent={Item}
+      buttonComponent={Button}
+    />
+  </LanguageProvider>
+</Preview>
+
+## Usage
+
+```tsx
+<LanguageProvider>
+  <LanguageSwitcher
+    containerComponent={Container}
+    listComponent={List}
+    itemComponent={Item}
+    buttonComponent={Button}
+  />
+</LanguageProvider>
+```
+
+## Props
+
+<Props
+  of={LanguageSwitcher}
+  exclude={[
+    'containerClassName',
+    'listClassName',
+    'itemClassName',
+    'buttonClassName',
+    'buttonActiveClassName',
+  ]}
+/>
