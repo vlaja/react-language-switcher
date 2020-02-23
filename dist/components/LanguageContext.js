@@ -6,4 +6,3 @@ exports.LanguageContext = react_1.createContext({
     language: const_1.DEFAULT_ISO_LANGUAGE,
     languageList: [const_1.DEFAULT_ISO_LANGUAGE],
 });
-//# sourceMappingURL=LanguageContext.js.map

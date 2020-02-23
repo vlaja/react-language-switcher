@@ -19,4 +19,3 @@ exports.LanguageSwitcherElement = function (_a) {
     var component = _a.component, children = _a.children, isHidden = _a.isHidden, props = __rest(_a, ["component", "children", "isHidden"]);
     return isHidden ? (react_1.default.createElement(react_1.default.Fragment, null, children)) : (react_1.default.createElement(component, props, children));
 };
-//# sourceMappingURL=LanguageSwitcherElement.js.map
