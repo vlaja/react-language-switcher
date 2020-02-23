@@ -1,11 +1,14 @@
 {
   "name": "@prototyp/react-language-switcher",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Set of components for language switching and route localisation",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": "git@github.com:vlaja/react-language-switcher.git",
   "author": "Vlatko Vlahek <vlatko@prototyp.digital>",
   "license": "MIT",
+  "files": [
+    "src/**/*.ts{,x}"
+  ],
   "devDependencies": {
     "@babel/core": "^7.8.3",
     "@babel/preset-react": "7.8.3",
@@ -48,6 +51,8 @@
   "scripts": {
     "storybook": "start-storybook -p 9009 --docs",
     "build-storybook": "build-storybook --docs -o docs",
+    "build": "tsc",
+    "publish": "tsc && npm publish",
     "eslint:fix": "eslint src/**/*.ts{,x} --fix"
   }
 }
