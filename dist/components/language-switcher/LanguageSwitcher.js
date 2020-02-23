@@ -14,4 +14,3 @@ exports.LanguageSwitcher = function (_a) {
         react_1.default.createElement(LanguageSwitcherElement_1.LanguageSwitcherElement, { component: listComponent || 'ul', className: listClassName }, languageList.map(function (lang) { return (react_1.default.createElement(LanguageSwitcherElement_1.LanguageSwitcherElement, { key: lang, component: itemComponent || 'li', className: itemClassName },
             react_1.default.createElement(LanguageSwitcherButton_1.LanguageSwitcherButton, { lang: lang, component: buttonComponent || 'button', className: buttonClassName, activeClassName: buttonActiveClassName }))); }))));
 };
-//# sourceMappingURL=LanguageSwitcher.js.map

@@ -8,4 +8,3 @@ __export(require("./LanguageProvider"));
 __export(require("./language-switcher/LanguageSwitcher"));
 __export(require("./language-switcher/LanguageSwitcherButton"));
 __export(require("./language-switcher/LanguageSwitcherElement"));
-//# sourceMappingURL=index.js.map

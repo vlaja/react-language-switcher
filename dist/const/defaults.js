@@ -11,4 +11,3 @@ exports.DEFAULT_CONFIG = {
     language: exports.DEFAULT_ISO_LANGUAGE,
     languageList: [exports.DEFAULT_ISO_LANGUAGE],
 };
-//# sourceMappingURL=defaults.js.map
