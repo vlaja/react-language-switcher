@@ -1,14 +1,25 @@
 {
   "name": "@prototyp/react-language-switcher",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Set of components for language switching and route localisation",
   "main": "dist/index.js",
   "homepage": "https://vlaja.github.io/react-language-switcher/?path=/docs/*",
-  "repository": "git@github.com:vlaja/react-language-switcher.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vlaja/react-language-switcher.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vlaja/react-language-switcher/issues"
+  },
   "author": "Vlatko Vlahek <vlatko@prototyp.digital>",
   "license": "MIT",
   "files": [
     "dist/**/*.js"
+  ],
+  "keywords": [
+    "react",
+    "intl",
+    "language-switcher"
   ],
   "devDependencies": {
     "@babel/core": "^7.8.3",
