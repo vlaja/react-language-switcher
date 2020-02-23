@@ -1,0 +1,53 @@
+{
+  "name": "@prototyp/react-language-switcher",
+  "version": "0.1.0",
+  "description": "Set of components for language switching and route localisation",
+  "main": "index.js",
+  "repository": "git@github.com:vlaja/react-language-switcher.git",
+  "author": "Vlatko Vlahek <vlatko@prototyp.digital>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/preset-react": "7.8.3",
+    "@storybook/addon-actions": "^5.3.8",
+    "@storybook/addon-docs": "^5.3.8",
+    "@storybook/addon-links": "^5.3.8",
+    "@storybook/addons": "^5.3.8",
+    "@storybook/preset-create-react-app": "1.5.2",
+    "@storybook/react": "^5.3.8",
+    "@types/jest": "^24.9.0",
+    "@types/node": "^13.1.8",
+    "@types/react": "^16.9.19",
+    "@types/react-router-dom": "^5.1.3",
+    "@types/storybook-react-router": "^1.0.1",
+    "@types/styled-components": "^4.4.2",
+    "@typescript-eslint/eslint-plugin": "^2.20.0",
+    "@typescript-eslint/parser": "2.20.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "aphrodite": "^2.4.0",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.0.6",
+    "babel-preset-react-app": "^9.1.0",
+    "jest": "^25.1.0",
+    "normalize.css": "^8.0.1",
+    "react": "^16.12.0",
+    "react-docgen-typescript-loader": "^3.6.0",
+    "react-is": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.3.0",
+    "styled-components": "^5.0.0",
+    "ts-jest": "^24.3.0",
+    "typescript": "^3.7.5"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 9009 --docs",
+    "build-storybook": "build-storybook --docs",
+    "eslint:fix": "eslint src/**/*.ts{,x} --fix"
+  }
+}
