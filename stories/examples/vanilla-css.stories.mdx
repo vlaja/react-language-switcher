@@ -1,0 +1,52 @@
+import { LanguageSwitcher, LanguageProvider } from 'components';
+import { Meta, Preview, Props } from '@storybook/addon-docs/blocks';
+
+import './css/styles.css';
+
+<Meta title="Examples|styling/css" />
+
+# Vanilla CSS
+
+While a lot new patterns such as CSS-in-JS or CSS Modules have appeared, vanilla CSS is still probably the most widely used solution.
+
+You can easily style `<LanguageSwitcher />` component by overriding the optional **className** props.
+
+## Preview
+
+<Preview withSource="none">
+  <LanguageProvider>
+    <LanguageSwitcher
+      containerClassName="language-switcher"
+      listClassName="language-switcher__list"
+      itemClassName="language-switcher__item"
+      buttonClassName="language-switcher__button"
+      buttonActiveClassName="language-switcher__button--active"
+    />
+  </LanguageProvider>
+</Preview>
+
+## Usage
+
+```tsx
+<LanguageProvider>
+  <LanguageSwitcher
+    containerClassName="language-switcher"
+    listClassName="language-switcher__list"
+    itemClassName="language-switcher__item"
+    buttonClassName="language-switcher__button"
+    buttonActiveClassName="language-switcher__button--active"
+  />
+</LanguageProvider>
+```
+
+## Props
+
+<Props
+  of={LanguageSwitcher}
+  exclude={[
+    'containerComponent',
+    'listComponent',
+    'itemComponent',
+    'buttonComponent',
+  ]}
+/>

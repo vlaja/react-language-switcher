@@ -1,0 +1,77 @@
+import { LanguageSwitcher, LanguageProvider } from 'components';
+import { StyleSheet, css } from 'aphrodite/no-important';
+import { Meta, Preview, Props } from '@storybook/addon-docs/blocks';
+
+export const borderBottom = '3px solid white';
+export const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#25aaff',
+  },
+  list: {
+    fontFamily:
+      "'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif",
+    display: 'flex',
+    listStyle: 'none',
+    padding: 0,
+  },
+  item: {
+    margin: '0 8px',
+  },
+  button: {
+    padding: '24px',
+    background: 'none',
+    border: 'none',
+    textDecoration: 'none',
+    textTransform: 'uppercase',
+    color: 'white',
+    ':hover': { borderBottom },
+    ':active': { borderBottom },
+  },
+  active: { borderBottom },
+});
+
+<Meta title="Examples|styling/aphrodite" />
+
+# Aphrodite
+
+Styling with Aphrodite
+
+## Preview
+
+<Preview withSource="none">
+  <LanguageProvider>
+    <LanguageSwitcher
+      containerClassName={css(styles.container)}
+      listClassName={css(styles.list)}
+      itemClassName={css(styles.item)}
+      buttonClassName={css(styles.button)}
+      buttonActiveClassName={css(styles.active)}
+    />
+  </LanguageProvider>
+</Preview>
+
+## Usage
+
+```tsx
+<LanguageProvider>
+  <LanguageSwitcher
+    containerClassName={css(styles.container)}
+    listClassName={css(styles.list)}
+    itemClassName={css(styles.item)}
+    buttonClassName={css(styles.button)}
+    buttonActiveClassName={css(styles.active)}
+  />
+</LanguageProvider>
+```
+
+## Props
+
+<Props
+  of={LanguageSwitcher}
+  exclude={[
+    'containerComponent',
+    'listComponent',
+    'itemComponent',
+    'buttonComponent',
+  ]}
+/>

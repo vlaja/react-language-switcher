@@ -1,0 +1,30 @@
+.container {
+    background-color: #25aaff;
+}
+
+.list {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.item {
+    margin: 0 8px;
+}
+
+.button {
+    padding: 24px;
+    color: white;
+    background: none;
+    border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.active,
+.button:hover,
+.button:active {
+    border-bottom: 3px solid white;
+}

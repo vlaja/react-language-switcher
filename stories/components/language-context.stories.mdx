@@ -1,0 +1,97 @@
+import { Meta, Props } from '@storybook/addon-docs/blocks';
+import PropTypes from 'prop-types';
+import { LanguageProvider, LanguageContext } from 'components';
+import { DEFAULT_ISO_LANGUAGE } from 'const';
+
+<Meta title="Components|LanguageContext" />
+
+# LanguageContext
+
+A Context component, that creates a new `React.Context` object, used for storing the language data for use by other components.
+
+**IMPORTANT**
+
+This component can be used as a low-level api for the LanguageProvider,
+although we suggest using the `<LanguageProvider />` component directly as it
+provides some good defaults!
+
+**IMPORTANT**
+
+## Elements
+
+Provider component allows other components to subscribe to language changes.
+
+```tsx
+<LanguageContext.Provider />
+```
+
+Consumer component allows a specific component to subscribe to language changes on the Provider.
+
+```tsx
+<LanguageContext.Consumer />
+```
+
+## Providing Context
+
+```tsx
+const [language, setLanguage] = useState('en');
+
+<LanguageContext.Provider
+  value={{
+    language,
+    setLanguage,
+    languageList: [language, 'de', 'fr'],
+  }}
+>
+  {children}
+</LanguageContext.Provider>;
+```
+
+## Consuming Context
+
+### useLanguageContext()
+
+The optimal way of consuming the language context is the provided hook
+
+```tsx
+const { language, languageList, setLanguage } = useLanguageContext();
+```
+
+### LanguageContext.Consumer
+
+You can also use the LanguageContext.Consumer component if you prefer that way.
+
+```tsx
+<LanguageContext.Consumer>
+  {({ language, languageList, setLanguage }) => ({ children })}
+</LanguageContext.Consumer>
+```
+
+## Props
+
+<Props
+  slot={() => ({
+    rows: [
+      {
+        name: 'language',
+        description: 'string',
+        type: PropTypes.string,
+        required: true,
+        defaultValue: { summary: DEFAULT_ISO_LANGUAGE },
+      },
+      {
+        name: 'languageList',
+        description: 'string[]',
+        type: PropTypes.arrayOf(PropTypes.string),
+        required: true,
+        defaultValue: { summary: '[]' },
+      },
+      {
+        name: 'setLanguage',
+        description: '(lang: string) => void | undefined',
+        type: PropTypes.func,
+        required: false,
+      },
+    ],
+  })}
+/>
