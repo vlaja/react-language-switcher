@@ -47,7 +47,7 @@
   },
   "scripts": {
     "storybook": "start-storybook -p 9009 --docs",
-    "build-storybook": "build-storybook --docs",
+    "build-storybook": "build-storybook --docs -o docs",
     "eslint:fix": "eslint src/**/*.ts{,x} --fix"
   }
 }

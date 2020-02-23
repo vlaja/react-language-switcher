@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{0:function(t,e,n){n(420),n(562),n(1235),n(1236),n(1238),t.exports=n(1269)},1:function(t,e){},1235:function(t,e,n){"use strict";n.r(e);var a=n(68),i=n(418);a.addons.setConfig({theme:Object(i.create)({base:"light",brandTitle:"PROTOTYP<br />react-language-switcher",brandUrl:"https://prototyp.digital"})})}},[[0,1,2]]]);

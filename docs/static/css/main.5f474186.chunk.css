@@ -1,0 +1,64 @@
+.styles_container__3dNW7 {
+    background-color: #25aaff;
+}
+
+.styles_list__1GzeP {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.styles_item__3WMlV {
+    margin: 0 8px;
+}
+
+.styles_button__2N_tj {
+    padding: 24px;
+    color: white;
+    background: none;
+    border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.styles_active__2TrwV,
+.styles_button__2N_tj:hover,
+.styles_button__2N_tj:active {
+    border-bottom: 3px solid white;
+}
+
+.language-switcher {
+    background-color: #25aaff;
+}
+
+.language-switcher__list {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.language-switcher__item {
+    margin: 0 8px;
+}
+
+.language-switcher__button {
+    padding: 24px;
+    color: white;
+    background: none;
+    border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.language-switcher__button--active,
+.language-switcher__button:hover,
+.language-switcher__button:active {
+    border-bottom: 3px solid white;
+}
+
+
+/*# sourceMappingURL=main.5f474186.chunk.css.map*/
