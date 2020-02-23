@@ -6,4 +6,3 @@ function useLanguageContext() {
     return react_1.useContext(components_1.LanguageContext);
 }
 exports.useLanguageContext = useLanguageContext;
-//# sourceMappingURL=useLanguageContext.js.map

@@ -26,4 +26,3 @@ exports.LanguageProvider = function (_a) {
         setCurrentLanguage(normalizeLanguage(lang));
     }
 };
-//# sourceMappingURL=LanguageProvider.js.map

@@ -41,4 +41,3 @@ exports.LanguageSwitcherButton = function (_a) {
         return buttonClassName;
     }
 };
-//# sourceMappingURL=LanguageSwitcherButton.js.map
