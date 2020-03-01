@@ -1,14 +1,18 @@
 import { createContext } from 'react';
 
-import { DEFAULT_ISO_LANGUAGE } from 'const';
+import { DEFAULT_CONFIG } from 'const';
 
 export interface LanguageContextProps {
   language: string;
   languageList: string[];
-  setLanguage?: (lang: string) => void;
+  middlewareList: React.ComponentType[];
+  setLanguage: (lang: string) => void;
+  registerMiddleware: (
+    component: React.ComponentType,
+    config?: Record<string, any>
+  ) => void;
 }
 
 export const LanguageContext = createContext<LanguageContextProps>({
-  language: DEFAULT_ISO_LANGUAGE,
-  languageList: [DEFAULT_ISO_LANGUAGE],
+  ...DEFAULT_CONFIG,
 });
