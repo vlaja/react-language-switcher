@@ -12,6 +12,9 @@
     "url": "https://github.com/vlaja/react-language-switcher/issues"
   },
   "author": "Vlatko Vlahek <vlatko@prototyp.digital>",
+  "contributors": [
+    "Antonio Falak <antonio@prototyp.digital> (https://github.com/afalak94)"
+  ],
   "license": "MIT",
   "files": [
     "dist/**/*"
