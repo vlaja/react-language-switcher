@@ -2,7 +2,7 @@
   "tabWidth": 4,
   "singleQuote": true,
   "prettier.jsxBracketSameLine": true,
-  "trailingComma": "all",
+  "trailingComma": "es5",
   "overrides": [
     {
       "files": ["*.tsx", "*.ts", "*.json", "*.yml", "*.mdx"],

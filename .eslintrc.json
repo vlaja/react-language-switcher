@@ -7,6 +7,7 @@
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:import/typescript",
+    "plugin:mdx/recommended",
     "prettier/@typescript-eslint",
     "plugin:prettier/recommended"
   ],
@@ -19,6 +20,7 @@
     }
   },
   "rules": {
+    "mdx/no-unescaped-entities": 0,
     "react/prop-types": 0,
     "react/no-unescaped-entities": 0,
     "@typescript-eslint/explicit-function-return-type": "off",
@@ -26,7 +28,7 @@
       "error",
       { "functions": false, "classes": true }
     ],
-    "comma-dangle": ["error", "always-multiline"],
+    "comma-dangle": ["error", "only-multiline"],
     "import/order": [
       "error",
       {
@@ -42,6 +44,12 @@
       }
     ]
   },
+  "overrides": [
+    {
+      "files": ["*.mdx"],
+      "extends": ["plugin:mdx/overrides"]
+    }
+  ],
   "settings": {
     "react": {
       "version": "detect"
