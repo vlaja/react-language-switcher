@@ -1,0 +1,44 @@
+import { Meta, Preview } from '@storybook/addon-docs/blocks';
+
+<Meta title="Documentation|Get started" />
+
+# Get started
+
+The core of `react-language-switcher` library leverages the [React Context API][1] by providing the set of two main components:
+
+- a language Provider that provides the language context and the ways of using it
+- a language Switcher component that allows you to style and use this logic
+
+### Basic usage
+
+Wrapping your application with a language Provider component exposes the language context to its children. Using a language
+Switcher component anywhere inside the child component tree will consume the language context and provide you with an unstyled
+unordered list of provided languages. Rendered list items contain unstyled buttons for changing the application language.
+
+```tsx
+import {
+  LanguageProvider,
+  LanguageSwitcher,
+} from '@prototyp/react-language-switcher';
+
+const App = () => (
+  <LanguageProvider>
+    <LanguageSwitcher />
+  </LanguageProvider>
+);
+```
+
+By default, the `LanguageProvider` component will use English as a selected language and the `LanguageSwitcher` component will render
+a list with only the English language option.
+
+Optionally, the `LanguageProvider` component takes a config object as a prop, which defines the selected language for the app
+and a list of all languages that will be used inside the app.
+
+```tsx
+<LanguageProvider config={{ language: 'en', languageList: ['en', 'de', 'fr'] }}>
+  <LanguageSwitcher />
+</LanguageProvider>
+```
+
+[1]: https://reactjs.org/docs/context.html
+
