@@ -1,11 +1,12 @@
 import { Meta, Preview, Props } from '@storybook/addon-docs/blocks';
-import { LanguageProvider, LanguageSwitcher } from 'components';
 
-<Meta title="Components|LanguageSwitcher" />
+import { LanguageProvider, Switcher } from 'components';
 
-# LanguageSwitcher
+<Meta title="Components/Switcher" />
 
-One of the key features of the `react-language-switcher` package is its flexibility when it comes to styling the `<LanguageSwitcher />` component.
+# Switcher
+
+One of the key features of the `react-language-switcher` package is its flexibility when it comes to styling the `<Switcher />` component.
 
 It is possible to override the `className` prop for each element, or override the whole component for each element separately, as well as mix and match these combinations.
 
@@ -30,7 +31,7 @@ It will render a list in the following html format:
 
 <Preview withSource="none">
   <LanguageProvider config={{ languageList: ['en', 'de', 'fr'] }}>
-    <LanguageSwitcher />
+    <Switcher />
   </LanguageProvider>
 </Preview>
 
@@ -38,7 +39,7 @@ It will render a list in the following html format:
 
 <Preview withSource="none">
   <LanguageProvider config={{ languageList: ['en', 'de', 'fr'] }}>
-    <LanguageSwitcher
+    <Switcher
       containerClassName="language-switcher"
       listClassName="language-switcher__list"
       itemClassName="language-switcher__item"
@@ -52,7 +53,7 @@ It will render a list in the following html format:
 
 ```tsx
 <LanguageProvider>
-  <LanguageSwitcher
+  <Switcher
     containerClassName="language-switcher"
     listClassName="language-switcher__list"
     itemClassName="language-switcher__item"
@@ -64,7 +65,7 @@ It will render a list in the following html format:
 
 ## Props
 
-<Props of={LanguageSwitcher} />
+<Props of={Switcher} />
 
 # Support
 

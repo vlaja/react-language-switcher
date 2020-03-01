@@ -1,14 +1,18 @@
-import { LanguageSwitcher, LanguageProvider } from 'components';
 import styled from 'styled-components';
 import { Meta, Preview, Props } from '@storybook/addon-docs/blocks';
+
+import { Switcher, LanguageProvider } from 'components';
+
+<Meta title="Examples/styling/styled-components" />
+
+export const fontFamily = "'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif'";
 
 export const Container = styled.div`
   background-color: #25aaff;
 `;
 
 export const List = styled.ul`
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: ${fontFamily};
   display: flex;
   list-style: none;
   padding: 0;
@@ -22,22 +26,32 @@ export const borderBottom = '3px solid white';
 export const Button = styled.button.attrs(props => ({
   isActive: props['data-current'],
 }))`
-  padding: 24px;
-  background: none;
-  border: none;
-  text-decoration: none;
-  text-transform: uppercase;
   color: white;
+  text-transform: uppercase;
+  padding: 24px;
+  display: inline-block;
+  vertical-align: middle;
+  touch-action: manipulation;
+  user-select: none;
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+  text-align: center;
+  border: 0;
+  background: transparent;
+  transition: all 0.15s ease-in-out;
+  font-size: 12px;
+  font-family: ${fontFamily};
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
   border-bottom: ${props => (props.isActive ? borderBottom : 'none')};
-&:hover {
-border-bottom: \${borderBottom};
-}
-&:active {
-border-bottom: \${borderBottom};
-}
+  &:hover {
+  border-bottom: \${borderBottom};
+  }
+  &:active {
+  border-bottom: \${borderBottom};
+  }
 `;
-
-<Meta title="Examples|styling/styled-components" />
 
 # Styled Components
 
@@ -46,8 +60,8 @@ Styling with Styled Components
 ## Preview
 
 <Preview withSource="none">
-  <LanguageProvider>
-    <LanguageSwitcher
+  <LanguageProvider config={{ languageList: ['en', 'de', 'fr']}}>
+    <Switcher
       containerComponent={Container}
       listComponent={List}
       itemComponent={Item}
@@ -59,8 +73,8 @@ Styling with Styled Components
 ## Usage
 
 ```tsx
-<LanguageProvider>
-  <LanguageSwitcher
+<LanguageProvider config={{ languageList: ['en', 'de', 'fr']}}>
+  <Switcher
     containerComponent={Container}
     listComponent={List}
     itemComponent={Item}
@@ -72,7 +86,7 @@ Styling with Styled Components
 ## Props
 
 <Props
-  of={LanguageSwitcher}
+  of={Switcher}
   exclude={[
     'containerClassName',
     'listClassName',
