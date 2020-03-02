@@ -43,7 +43,16 @@ export const LanguageProvider: React.FC<LanguageProviderConfig> = ({
         registerMiddleware,
       }}
     >
-      {children}
+      {currentMiddleware.middlewareList
+        ?.filter(m => !m.passive)
+        .reduceRight(
+          (_, cur) => (
+            <cur.middleware key={cur.middleware.displayName}>
+              {children}
+            </cur.middleware>
+          ),
+          children
+        )}
     </LanguageContext.Provider>
   );
 
@@ -60,10 +69,11 @@ export const LanguageProvider: React.FC<LanguageProviderConfig> = ({
 
   function registerMiddleware(
     middleware: React.ComponentType,
+    passive: boolean,
     config?: Record<string, any>
   ) {
     setCurrentMiddleware(s => ({
-      middlewareList: [...s.middlewareList, middleware],
+      middlewareList: [...(s.middlewareList || []), { middleware, passive }],
       middlewareProps: { ...s.middlewareProps, ...(config || {}) },
     }));
   }
