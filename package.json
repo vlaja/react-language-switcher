@@ -59,7 +59,9 @@
     "react-scripts": "^3.3.0",
     "styled-components": "^5.0.0",
     "ts-jest": "^24.3.0",
-    "typescript": "^3.7.5"
+    "ttypescript": "^1.5.10",
+    "typescript": "^3.7.5",
+    "typescript-transform-paths": "^1.1.14"
   },
   "peerDependencies": {
     "react": ">=16.8.0"
@@ -67,7 +69,7 @@
   "scripts": {
     "storybook": "start-storybook -p 9009 --docs",
     "build-storybook": "build-storybook -o docs --docs",
-    "build": "tsc",
+    "build": "ttsc",
     "lint": "eslint src/**/*.ts{,x}",
     "lint:fix": "eslint src/**/*.ts{,x} --fix"
   }

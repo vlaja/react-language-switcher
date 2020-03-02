@@ -15,7 +15,7 @@ interface SwitcherProps {
   buttonClassName?: string;
   buttonActiveClassName?: string;
   buttonComponent?: React.ComponentType;
-  customSelector: () => string[];
+  customSelector?: () => string[];
 }
 
 export const Switcher: React.FC<SwitcherProps> = ({
