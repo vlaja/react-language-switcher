@@ -26,7 +26,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = __importStar(require("react"));
-var const_1 = require("const");
+var const_1 = require("../const");
 var LanguageContext_1 = require("./LanguageContext");
 exports.LanguageProvider = function (_a) {
     var children = _a.children, config = _a.config;

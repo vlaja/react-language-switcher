@@ -24,11 +24,7 @@
     "declaration": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "paths": {
-      "components/*": ["src/components/*"],
-      "const/*": ["src/const/*"],
-      "hooks/*": ["src/hooks/*"]
-    }
+    "plugins": [{ "transform": "typescript-transform-paths" }]
   },
   "include": ["src", "@types", "stories"],
   "exclude": ["node_modules", "build", "scripts", ".storybook"]
