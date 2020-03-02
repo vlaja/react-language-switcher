@@ -23,7 +23,8 @@
     "noUnusedLocals": true,
     "declaration": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+    "plugins": [{ "transform": "typescript-transform-paths" }]
   },
   "include": ["src", "@types", "stories"],
   "exclude": ["node_modules", "build", "scripts", ".storybook"]

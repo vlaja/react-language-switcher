@@ -12,5 +12,5 @@ var __assign = (this && this.__assign) || function () {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = require("react");
-var const_1 = require("const");
+var const_1 = require("../const");
 exports.LanguageContext = react_1.createContext(__assign({}, const_1.DEFAULT_CONFIG));

@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = __importDefault(require("react"));
-var hooks_1 = require("hooks");
+var hooks_1 = require("../../hooks");
 var SwitcherButton_1 = require("./SwitcherButton");
 var SwitcherElement_1 = require("./SwitcherElement");
 exports.Switcher = function (_a) {

@@ -15,7 +15,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = __importDefault(require("react"));
-var hooks_1 = require("hooks");
+var hooks_1 = require("../../hooks");
 exports.SwitcherButton = function (_a) {
     var className = _a.className, activeClassName = _a.activeClassName, component = _a.component, lang = _a.lang;
     var _b = hooks_1.useLanguageContext(), language = _b.language, setLanguage = _b.setLanguage;
