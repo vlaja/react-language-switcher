@@ -1,15 +1,18 @@
-import { LanguageSwitcher, LanguageProvider } from 'components';
 import { StyleSheet, css } from 'aphrodite/no-important';
 import { Meta, Preview, Props } from '@storybook/addon-docs/blocks';
 
+import { Switcher, LanguageProvider } from 'components';
+
 export const borderBottom = '3px solid white';
+export const fontFamily =
+  "'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif";
+
 export const styles = StyleSheet.create({
   container: {
     backgroundColor: '#25aaff',
   },
   list: {
-    fontFamily:
-      "'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif",
+    fontFamily,
     display: 'flex',
     listStyle: 'none',
     padding: 0,
@@ -18,19 +21,30 @@ export const styles = StyleSheet.create({
     margin: '0 8px',
   },
   button: {
-    padding: '24px',
-    background: 'none',
-    border: 'none',
-    textDecoration: 'none',
-    textTransform: 'uppercase',
     color: 'white',
+    textTransform: 'uppercase',
+    padding: '24px',
+    display: 'inline-block',
+    verticalAlign: 'middle',
+    touchAction: 'manipulation',
+    userSelect: 'none',
+    cursor: 'pointer',
+    whiteSpace: 'nowrap',
+    textDecoration: 'none',
+    textAlign: 'center',
+    border: 0,
+    background: 'transparent',
+    transition: 'all 0.15s ease-in-out',
+    fontSize: '12px',
+    letterSpacing: '0.2em',
+    fontFamily,
     ':hover': { borderBottom },
     ':active': { borderBottom },
   },
   active: { borderBottom },
 });
 
-<Meta title="Examples|styling/aphrodite" />
+<Meta title="Examples/styling/aphrodite" />
 
 # Aphrodite
 
@@ -39,8 +53,8 @@ Styling with Aphrodite
 ## Preview
 
 <Preview withSource="none">
-  <LanguageProvider>
-    <LanguageSwitcher
+  <LanguageProvider config={{ languageList: ['en', 'de', 'fr'] }}>
+    <Switcher
       containerClassName={css(styles.container)}
       listClassName={css(styles.list)}
       itemClassName={css(styles.item)}
@@ -53,8 +67,8 @@ Styling with Aphrodite
 ## Usage
 
 ```tsx
-<LanguageProvider>
-  <LanguageSwitcher
+<LanguageProvider config={{ languageList: ['en', 'de', 'fr'] }}>
+  <Switcher
     containerClassName={css(styles.container)}
     listClassName={css(styles.list)}
     itemClassName={css(styles.item)}
@@ -67,7 +81,7 @@ Styling with Aphrodite
 ## Props
 
 <Props
-  of={LanguageSwitcher}
+  of={Switcher}
   exclude={[
     'containerComponent',
     'listComponent',

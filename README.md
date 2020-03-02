@@ -31,7 +31,7 @@ npm install @prototyp/react-language-switcher
 The gist of using this plugin consists of two components. A Language provider that provides the language context and the ways of using it, and the Language Switcher component that allows you to style and use this logic.
 
 ```jsx
-<LanguageProvider config={{ languageList: ['en', 'de', 'fr'] }}>
+<LanguageProvider config={{ language: 'en', languageList: ['en', 'de', 'fr'] }}>
     <LanguageSwitcher />
 </LanguageProvider>
 ```

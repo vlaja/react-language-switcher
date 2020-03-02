@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.5f474186.chunk.css",
-    "main.js": "/main.e13412b0db45ce7af454.bundle.js",
-    "main.css.map": "/static/css/main.5f474186.chunk.css.map",
-    "main.js.map": "/main.e13412b0db45ce7af454.bundle.js.map",
-    "runtime~main.js": "/runtime~main.e13412b0db45ce7af454.bundle.js",
-    "runtime~main.js.map": "/runtime~main.e13412b0db45ce7af454.bundle.js.map",
-    "vendors~main.js": "/vendors~main.e13412b0db45ce7af454.bundle.js",
-    "vendors~main.js.map": "/vendors~main.e13412b0db45ce7af454.bundle.js.map",
-    "iframe.html": "/iframe.html",
-    "precache-manifest.e7d3c417f485efe6029f2809912a4adb.js": "/precache-manifest.e7d3c417f485efe6029f2809912a4adb.js",
-    "service-worker.js": "/service-worker.js",
-    "vendors~main.e13412b0db45ce7af454.bundle.js.LICENSE": "/vendors~main.e13412b0db45ce7af454.bundle.js.LICENSE"
+    "main.css": "/react-language-switcher/static/css/main.72197f6f.chunk.css",
+    "main.js": "/react-language-switcher/main.2f480c0f226b4b5f7fb2.bundle.js",
+    "main.css.map": "/react-language-switcher/static/css/main.72197f6f.chunk.css.map",
+    "main.js.map": "/react-language-switcher/main.2f480c0f226b4b5f7fb2.bundle.js.map",
+    "runtime~main.js": "/react-language-switcher/runtime~main.2f480c0f226b4b5f7fb2.bundle.js",
+    "runtime~main.js.map": "/react-language-switcher/runtime~main.2f480c0f226b4b5f7fb2.bundle.js.map",
+    "vendors~main.js": "/react-language-switcher/vendors~main.2f480c0f226b4b5f7fb2.bundle.js",
+    "vendors~main.js.map": "/react-language-switcher/vendors~main.2f480c0f226b4b5f7fb2.bundle.js.map",
+    "iframe.html": "/react-language-switcher/iframe.html",
+    "precache-manifest.0b5b8f457fee3978183a066ae36d7a14.js": "/react-language-switcher/precache-manifest.0b5b8f457fee3978183a066ae36d7a14.js",
+    "service-worker.js": "/react-language-switcher/service-worker.js",
+    "vendors~main.2f480c0f226b4b5f7fb2.bundle.js.LICENSE.txt": "/react-language-switcher/vendors~main.2f480c0f226b4b5f7fb2.bundle.js.LICENSE.txt"
   },
   "entrypoints": [
-    "runtime~main.e13412b0db45ce7af454.bundle.js",
-    "vendors~main.e13412b0db45ce7af454.bundle.js",
-    "static/css/main.5f474186.chunk.css",
-    "main.e13412b0db45ce7af454.bundle.js"
+    "runtime~main.2f480c0f226b4b5f7fb2.bundle.js",
+    "vendors~main.2f480c0f226b4b5f7fb2.bundle.js",
+    "static/css/main.72197f6f.chunk.css",
+    "main.2f480c0f226b4b5f7fb2.bundle.js"
   ]
 }

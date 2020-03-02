@@ -2,10 +2,10 @@ import React from 'react';
 
 import { useLanguageContext } from 'hooks';
 
-import { LanguageSwitcherButton } from './LanguageSwitcherButton';
-import { LanguageSwitcherElement } from './LanguageSwitcherElement';
+import { SwitcherButton } from './SwitcherButton';
+import { SwitcherElement } from './SwitcherElement';
 
-interface LanguageSwitcherProps {
+interface SwitcherProps {
   containerClassName?: string;
   containerComponent?: React.ComponentType;
   listClassName?: string;
@@ -15,9 +15,10 @@ interface LanguageSwitcherProps {
   buttonClassName?: string;
   buttonActiveClassName?: string;
   buttonComponent?: React.ComponentType;
+  customSelector: () => string[];
 }
 
-export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
+export const Switcher: React.FC<SwitcherProps> = ({
   containerClassName,
   containerComponent,
   listClassName,
@@ -27,34 +28,40 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
   buttonClassName,
   buttonActiveClassName,
   buttonComponent,
+  customSelector,
 }) => {
   const { languageList } = useLanguageContext();
 
+  let values = languageList;
+  if (customSelector) {
+    values = customSelector() || values;
+  }
+
   return (
-    <LanguageSwitcherElement
+    <SwitcherElement
       isHidden={!containerComponent && !containerClassName}
       component={containerComponent || 'div'}
       className={containerClassName}
     >
-      <LanguageSwitcherElement
+      <SwitcherElement
         component={listComponent || 'ul'}
         className={listClassName}
       >
-        {languageList.map(lang => (
-          <LanguageSwitcherElement
-            key={lang}
+        {values.map(value => (
+          <SwitcherElement
+            key={value}
             component={itemComponent || 'li'}
             className={itemClassName}
           >
-            <LanguageSwitcherButton
-              lang={lang}
+            <SwitcherButton
+              lang={value}
               component={buttonComponent || 'button'}
               className={buttonClassName}
               activeClassName={buttonActiveClassName}
             />
-          </LanguageSwitcherElement>
+          </SwitcherElement>
         ))}
-      </LanguageSwitcherElement>
-    </LanguageSwitcherElement>
+      </SwitcherElement>
+    </SwitcherElement>
   );
 };

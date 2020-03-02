@@ -1,9 +1,10 @@
 import { Meta, Props } from '@storybook/addon-docs/blocks';
 import PropTypes from 'prop-types';
-import { LanguageProvider, LanguageContext } from 'components';
+
+import { LanguageContext } from 'components';
 import { DEFAULT_ISO_LANGUAGE } from 'const';
 
-<Meta title="Components|LanguageContext" />
+<Meta title="Components/LanguageContext" />
 
 # LanguageContext
 
@@ -84,7 +85,7 @@ You can also use the LanguageContext.Consumer component if you prefer that way.
         description: 'string[]',
         type: PropTypes.arrayOf(PropTypes.string),
         required: true,
-        defaultValue: { summary: '[]' },
+        defaultValue: { summary: "['en']" },
       },
       {
         name: 'setLanguage',

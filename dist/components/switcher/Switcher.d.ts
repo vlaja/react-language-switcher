@@ -1,5 +1,5 @@
 import React from 'react';
-interface LanguageSwitcherProps {
+interface SwitcherProps {
     containerClassName?: string;
     containerComponent?: React.ComponentType;
     listClassName?: string;
@@ -9,6 +9,7 @@ interface LanguageSwitcherProps {
     buttonClassName?: string;
     buttonActiveClassName?: string;
     buttonComponent?: React.ComponentType;
+    customSelector: () => string[];
 }
-export declare const LanguageSwitcher: React.FC<LanguageSwitcherProps>;
+export declare const Switcher: React.FC<SwitcherProps>;
 export {};

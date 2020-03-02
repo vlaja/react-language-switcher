@@ -2,14 +2,14 @@ import React from 'react';
 
 import { useLanguageContext } from 'hooks';
 
-interface LanguageSwitcherButtonProps {
+interface SwitcherButtonProps {
   className?: string;
   activeClassName?: string;
   component: string | React.ComponentType;
   lang: string;
 }
 
-export const LanguageSwitcherButton: React.FC<LanguageSwitcherButtonProps> = ({
+export const SwitcherButton: React.FC<SwitcherButtonProps> = ({
   className,
   activeClassName,
   component,
@@ -21,7 +21,7 @@ export const LanguageSwitcherButton: React.FC<LanguageSwitcherButtonProps> = ({
   const buttonProps = {
     value: lang,
     className: getButtonClasses(),
-    onClick: setLanguage?.bind(undefined, lang),
+    onClick: onButtonClick,
   };
 
   const Button = component;
@@ -30,6 +30,13 @@ export const LanguageSwitcherButton: React.FC<LanguageSwitcherButtonProps> = ({
       {lang}
     </Button>
   );
+
+  function onButtonClick() {
+    if (setLanguage) {
+      setLanguage(lang);
+      document.documentElement.lang = lang;
+    }
+  }
 
   function getButtonClasses() {
     if (typeof component !== 'string') {

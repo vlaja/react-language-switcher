@@ -4,10 +4,11 @@
 
 .language-switcher__list {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
     display: flex;
     list-style: none;
-    padding: 0;
+    padding-left: 0;
+    margin: 0;
 }
 
 .language-switcher__item {
@@ -15,12 +16,29 @@
 }
 
 .language-switcher__button {
-    padding: 24px;
     color: white;
-    background: none;
-    border: none;
-    text-decoration: none;
     text-transform: uppercase;
+
+    padding: 24px;
+    display: inline-block;
+    vertical-align: middle;
+
+    touch-action: manipulation;
+    user-select: none;
+
+    cursor: pointer;
+    white-space: nowrap;
+    text-decoration: none;
+    text-align: center;
+    border: 0;
+    background: transparent;
+
+    transition: all 0.15s ease-in-out;
+
+    font-size: 12px;
+    font-family: var(--ff-sans);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
 }
 
 .language-switcher__button--active,
