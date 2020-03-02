@@ -4,7 +4,8 @@ import { Meta, Preview, Props } from '@storybook/addon-docs/blocks';
 import { Switcher, LanguageProvider } from 'components';
 
 export const borderBottom = '3px solid white';
-export const fontFamily = "'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif";
+export const fontFamily =
+  "'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif";
 
 export const styles = StyleSheet.create({
   container: {
@@ -52,7 +53,7 @@ Styling with Aphrodite
 ## Preview
 
 <Preview withSource="none">
-  <LanguageProvider config={{ languageList: ['en', 'de', 'fr']}}>
+  <LanguageProvider config={{ languageList: ['en', 'de', 'fr'] }}>
     <Switcher
       containerClassName={css(styles.container)}
       listClassName={css(styles.list)}
@@ -66,7 +67,7 @@ Styling with Aphrodite
 ## Usage
 
 ```tsx
-<LanguageProvider config={{ languageList: ['en', 'de', 'fr']}}>
+<LanguageProvider config={{ languageList: ['en', 'de', 'fr'] }}>
   <Switcher
     containerClassName={css(styles.container)}
     listClassName={css(styles.list)}

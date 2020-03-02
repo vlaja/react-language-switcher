@@ -5,7 +5,8 @@ import { Switcher, LanguageProvider } from 'components';
 
 <Meta title="Examples/styling/styled-components" />
 
-export const fontFamily = "'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif'";
+export const fontFamily =
+  "'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif'";
 
 export const Container = styled.div`
   background-color: #25aaff;
@@ -46,10 +47,10 @@ export const Button = styled.button.attrs(props => ({
   letter-spacing: 0.2em;
   border-bottom: ${props => (props.isActive ? borderBottom : 'none')};
   &:hover {
-  border-bottom: \${borderBottom};
+    border-bottom: ${borderBottom};
   }
   &:active {
-  border-bottom: \${borderBottom};
+    border-bottom: ${borderBottom};
   }
 `;
 
@@ -60,7 +61,7 @@ Styling with Styled Components
 ## Preview
 
 <Preview withSource="none">
-  <LanguageProvider config={{ languageList: ['en', 'de', 'fr']}}>
+  <LanguageProvider config={{ languageList: ['en', 'de', 'fr'] }}>
     <Switcher
       containerComponent={Container}
       listComponent={List}
@@ -73,7 +74,7 @@ Styling with Styled Components
 ## Usage
 
 ```tsx
-<LanguageProvider config={{ languageList: ['en', 'de', 'fr']}}>
+<LanguageProvider config={{ languageList: ['en', 'de', 'fr'] }}>
   <Switcher
     containerComponent={Container}
     listComponent={List}

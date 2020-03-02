@@ -46,12 +46,12 @@ You can style the component in 3 ways.
 There are 5 separate class properties that you can override, visible in the example below.
 
 ```tsx
-  <Switcher
-    containerClassName="language-switcher"
-    listClassName="language-switcher__list"
-    itemClassName="language-switcher__item"
-    buttonClassName="language-switcher__button"
-    buttonActiveClassName="language-switcher__button--active"
+<Switcher
+  containerClassName="language-switcher"
+  listClassName="language-switcher__list"
+  itemClassName="language-switcher__item"
+  buttonClassName="language-switcher__button"
+  buttonActiveClassName="language-switcher__button--active"
 />
 ```
 
@@ -79,14 +79,14 @@ This approach will keep the default component elements, and apply your classes t
 There are 4 separate component properties that you can override.
 
 ```tsx
-  <LanguageProvider>
-    <Switcher
-      containerClassName="language-switcher"
-      containerComponent={Container}
-      listComponent={List}
-      itemComponent={Item}
-      buttonComponent={Button}
-    />
+<LanguageProvider>
+  <Switcher
+    containerClassName="language-switcher"
+    containerComponent={Container}
+    listComponent={List}
+    itemComponent={Item}
+    buttonComponent={Button}
+  />
 </LanguageProvider>
 ```
 
@@ -108,7 +108,6 @@ This approach will keep the default component elements, and apply your classes t
   </ul>
 </div>
 ```
-
 
 ## Props
 
