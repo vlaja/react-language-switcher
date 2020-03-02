@@ -2,5 +2,9 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "eslint.validate": ["typescript", "typescriptreact", "mdx"]
+  "eslint.options": {
+    "extensions": [".mdx"]
+  },
+  "eslint.validate": ["typescript", "typescriptreact", "mdx"],
+  "auto-close-tag.activationOnLanguage": ["mdx"]
 }

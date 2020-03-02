@@ -7,9 +7,9 @@
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:import/typescript",
-    "plugin:mdx/recommended",
     "prettier/@typescript-eslint",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:mdx/recommended"
   ],
   "plugins": ["react", "import", "@typescript-eslint", "prettier"],
   "parserOptions": {
@@ -47,7 +47,8 @@
   "overrides": [
     {
       "files": ["*.mdx"],
-      "extends": ["plugin:mdx/overrides"]
+      "extends": ["plugin:mdx/overrides"],
+      "parser": "eslint-mdx"
     }
   ],
   "settings": {
