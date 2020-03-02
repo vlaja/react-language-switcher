@@ -1,0 +1,132 @@
+:root {
+    --ff-sans: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+}
+
+/** 
+ * Base examples
+ */
+.styles_container__3dNW7 {
+    background-color: #25aaff;
+}
+
+.styles_list__1GzeP {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    font-family: var(--ff-sans);
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.styles_item__3WMlV {
+    margin: 0 8px !important;
+}
+
+.styles_button__2N_tj {
+    padding: 24px;
+    color: white;
+
+    display: inline-block;
+    vertical-align: middle;
+
+    touch-action: manipulation;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    cursor: pointer;
+    white-space: nowrap;
+    text-decoration: none;
+    text-align: center;
+    border: 0;
+    background: transparent;
+
+    transition: all 0.15s ease-in-out;
+
+    font-size: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    font-family: var(--ff-sans);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.styles_active__2TrwV,
+.styles_button__2N_tj:hover,
+.styles_button__2N_tj:active {
+    border-bottom: 3px solid white;
+}
+
+/** 
+ * Complex examples
+ */
+.styles_header__2qG2K {
+    display: flex;
+    justify-content: space-between;
+}
+
+.styles_page__29hCW {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    font-family: var(--ff-sans);
+    width: 80%;
+    padding: 24px;
+}
+
+.language-switcher {
+    background-color: #25aaff;
+}
+
+.language-switcher__list {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.language-switcher__item {
+    margin: 0 8px;
+}
+
+.language-switcher__button {
+    color: white;
+    text-transform: uppercase;
+
+    padding: 24px;
+    display: inline-block;
+    vertical-align: middle;
+
+    touch-action: manipulation;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    cursor: pointer;
+    white-space: nowrap;
+    text-decoration: none;
+    text-align: center;
+    border: 0;
+    background: transparent;
+
+    transition: all 0.15s ease-in-out;
+
+    font-size: 12px;
+    font-family: var(--ff-sans);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.language-switcher__button--active,
+.language-switcher__button:hover,
+.language-switcher__button:active {
+    border-bottom: 3px solid white;
+}
+
+
+/*# sourceMappingURL=main.72197f6f.chunk.css.map*/

@@ -1,12 +1,12 @@
 import React from 'react';
 
-interface LanguageSwitcherElementProps {
+interface SwitcherElementProps {
   className?: string;
   component: string | React.ComponentType;
   isHidden?: boolean;
 }
 
-export const LanguageSwitcherElement: React.FC<LanguageSwitcherElementProps> = ({
+export const SwitcherElement: React.FC<SwitcherElementProps> = ({
   component,
   children,
   isHidden,

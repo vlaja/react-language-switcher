@@ -16,18 +16,23 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = __importDefault(require("react"));
 var hooks_1 = require("hooks");
-exports.LanguageSwitcherButton = function (_a) {
+exports.SwitcherButton = function (_a) {
     var className = _a.className, activeClassName = _a.activeClassName, component = _a.component, lang = _a.lang;
-    var _b;
-    var _c = hooks_1.useLanguageContext(), language = _c.language, setLanguage = _c.setLanguage;
+    var _b = hooks_1.useLanguageContext(), language = _b.language, setLanguage = _b.setLanguage;
     var isCurrentLanguage = lang === language;
     var buttonProps = {
         value: lang,
         className: getButtonClasses(),
-        onClick: (_b = setLanguage) === null || _b === void 0 ? void 0 : _b.bind(undefined, lang),
+        onClick: onButtonClick,
     };
     var Button = component;
     return (react_1.default.createElement(Button, __assign({ "data-current": isCurrentLanguage }, buttonProps), lang));
+    function onButtonClick() {
+        if (setLanguage) {
+            setLanguage(lang);
+            document.documentElement.lang = lang;
+        }
+    }
     function getButtonClasses() {
         if (typeof component !== 'string') {
             return null;

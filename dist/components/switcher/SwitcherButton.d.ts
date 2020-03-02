@@ -1,9 +1,9 @@
 import React from 'react';
-interface LanguageSwitcherButtonProps {
+interface SwitcherButtonProps {
     className?: string;
     activeClassName?: string;
     component: string | React.ComponentType;
     lang: string;
 }
-export declare const LanguageSwitcherButton: React.FC<LanguageSwitcherButtonProps>;
+export declare const SwitcherButton: React.FC<SwitcherButtonProps>;
 export {};

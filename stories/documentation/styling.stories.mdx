@@ -1,11 +1,12 @@
 import { Meta, Preview, Props } from '@storybook/addon-docs/blocks';
-import { LanguageProvider, LanguageSwitcher } from 'components';
 
-<Meta title="Documentation|Styling" />
+import { LanguageProvider, Switcher } from 'components';
+
+<Meta title="Documentation/Styling" />
 
 # Styling
 
-One of the key features of the `react-language-switcher` package is its flexibility when it comes to styling the `<LanguageSwitcher />` component.
+One of the key features of the `react-language-switcher` package is its flexibility when it comes to styling the `<Switcher />` component.
 
 It is possible to override the `className` prop for each element, or override the whole component for each element separately, as well as mix and match these combinations.
 
@@ -30,7 +31,7 @@ It will render a list in the following html format:
 
 <Preview withSource="none">
   <LanguageProvider config={{ languageList: ['en', 'de', 'fr'] }}>
-    <LanguageSwitcher />
+    <Switcher />
   </LanguageProvider>
 </Preview>
 
@@ -45,12 +46,12 @@ You can style the component in 3 ways.
 There are 5 separate class properties that you can override, visible in the example below.
 
 ```tsx
-  <LanguageSwitcher
-    containerClassName="language-switcher"
-    listClassName="language-switcher__list"
-    itemClassName="language-switcher__item"
-    buttonClassName="language-switcher__button"
-    buttonActiveClassName="language-switcher__button--active"
+<Switcher
+  containerClassName="language-switcher"
+  listClassName="language-switcher__list"
+  itemClassName="language-switcher__item"
+  buttonClassName="language-switcher__button"
+  buttonActiveClassName="language-switcher__button--active"
 />
 ```
 
@@ -78,14 +79,14 @@ This approach will keep the default component elements, and apply your classes t
 There are 4 separate component properties that you can override.
 
 ```tsx
-  <LanguageProvider>
-    <LanguageSwitcher
-      containerClassName="language-switcher"
-      containerComponent={Container}
-      listComponent={List}
-      itemComponent={Item}
-      buttonComponent={Button}
-    />
+<LanguageProvider>
+  <Switcher
+    containerClassName="language-switcher"
+    containerComponent={Container}
+    listComponent={List}
+    itemComponent={Item}
+    buttonComponent={Button}
+  />
 </LanguageProvider>
 ```
 
@@ -108,10 +109,9 @@ This approach will keep the default component elements, and apply your classes t
 </div>
 ```
 
-
 ## Props
 
-<Props of={LanguageSwitcher} />
+<Props of={Switcher} />
 
 # Support
 

@@ -11,4 +11,7 @@ export const DEFAULT_ISO_LANGUAGE = 'en';
 export const DEFAULT_CONFIG: LanguageContextProps = {
   language: DEFAULT_ISO_LANGUAGE,
   languageList: [DEFAULT_ISO_LANGUAGE],
+  middlewareList: [],
+  setLanguage: () => undefined,
+  registerMiddleware: () => undefined,
 };
