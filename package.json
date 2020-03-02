@@ -1,6 +1,6 @@
 {
   "name": "@prototyp/react-language-switcher",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "description": "Set of components for language switching and route localisation",
   "main": "dist/index.js",
   "homepage": "https://vlaja.github.io/react-language-switcher/?path=/docs/*",
@@ -68,8 +68,7 @@
     "storybook": "start-storybook -p 9009 --docs",
     "build-storybook": "build-storybook -o docs --docs",
     "build": "tsc",
-    "prepublish": "yarn build",
-    "publish": "npm publish",
-    "eslint:fix": "eslint src/**/*.ts{,x} --fix"
+    "lint": "eslint src/**/*.ts{,x}",
+    "lint:fix": "eslint src/**/*.ts{,x} --fix"
   }
 }
