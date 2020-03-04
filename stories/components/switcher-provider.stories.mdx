@@ -1,10 +1,10 @@
 import { Meta, Props } from '@storybook/addon-docs/blocks';
 
-import { LanguageProvider } from 'components';
+import { SwitcherProvider } from 'provider';
 
-<Meta title="Components/LanguageProvider" />
+<Meta title="Components/SwitcherProvider" />
 
-# LanguageProvider
+# SwitcherProvider
 
 A Provider component, that provides `<LanguageContext />` to its children.
 
@@ -13,15 +13,15 @@ It allows any child, regardless of the depth, to have access to the context valu
 ## Element
 
 ```tsx
-<LanguageProvider />
+<SwitcherProvider />
 ```
 
 ## Usage
 
 ```tsx
-<LanguageProvider>{children}</LanguageProvider>
+<SwitcherProvider>{children}</SwitcherProvider>
 ```
 
 ## Props
 
-<Props of={LanguageProvider} />
+<Props of={SwitcherProvider} />

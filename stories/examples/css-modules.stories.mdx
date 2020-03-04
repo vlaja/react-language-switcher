@@ -1,6 +1,7 @@
 import { Meta, Preview, Props } from '@storybook/addon-docs/blocks';
 
-import { Switcher, LanguageProvider } from 'components';
+import { LanguageSwitcher } from 'middleware/language';
+import { SwitcherProvider } from 'provider';
 
 import styles from './css/styles.module.css';
 
@@ -13,35 +14,37 @@ Styling with CSS Modules
 ## Preview
 
 <Preview withSource="none">
-  <LanguageProvider config={{ languageList: ['en', 'de', 'fr'] }}>
-    <Switcher
+  <SwitcherProvider>
+    <LanguageSwitcher
+      languageList={['en', 'de', 'fr']}
       containerClassName={styles.container}
       listClassName={styles.list}
       itemClassName={styles.item}
       buttonClassName={styles.button}
       buttonActiveClassName={styles.active}
     />
-  </LanguageProvider>
+  </SwitcherProvider>
 </Preview>
 
 ## Usage
 
 ```tsx
-<LanguageProvider config={{ languageList: ['en', 'de', 'fr'] }}>
-  <Switcher
+<SwitcherProvider>
+  <LanguageSwitcher
+    languageList={['en', 'de', 'fr']}
     containerClassName={styles.container}
     listClassName={styles.list}
     itemClassName={styles.item}
     buttonClassName={styles.button}
     buttonActiveClassName={styles.active}
   />
-</LanguageProvider>
+</SwitcherProvider>
 ```
 
 ## Props
 
 <Props
-  of={Switcher}
+  of={LanguageSwitcher}
   exclude={[
     'containerComponent',
     'listComponent',

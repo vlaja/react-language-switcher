@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { Meta, Preview, Props } from '@storybook/addon-docs/blocks';
 
-import { Switcher, LanguageProvider } from 'components';
+import { LanguageSwitcher } from 'middleware/language';
+import { SwitcherProvider } from 'provider';
 
 <Meta title="Examples/styling/styled-components" />
 
@@ -25,7 +26,7 @@ export const Item = styled.li`
 
 export const borderBottom = '3px solid white';
 export const Button = styled.button.attrs(props => ({
-  isActive: props['data-current'],
+  isActive: props['data-active'],
 }))`
   color: white;
   text-transform: uppercase;
@@ -61,33 +62,35 @@ Styling with Styled Components
 ## Preview
 
 <Preview withSource="none">
-  <LanguageProvider config={{ languageList: ['en', 'de', 'fr'] }}>
-    <Switcher
+  <SwitcherProvider>
+    <LanguageSwitcher
+      languageList={['en', 'de', 'fr']}
       containerComponent={Container}
       listComponent={List}
       itemComponent={Item}
       buttonComponent={Button}
     />
-  </LanguageProvider>
+  </SwitcherProvider>
 </Preview>
 
 ## Usage
 
 ```tsx
-<LanguageProvider config={{ languageList: ['en', 'de', 'fr'] }}>
-  <Switcher
+<SwitcherProvider>
+  <LanguageSwitcher
+    languageList={['en', 'de', 'fr']}
     containerComponent={Container}
     listComponent={List}
     itemComponent={Item}
     buttonComponent={Button}
   />
-</LanguageProvider>
+</SwitcherProvider>
 ```
 
 ## Props
 
 <Props
-  of={Switcher}
+  of={LanguageSwitcher}
   exclude={[
     'containerClassName',
     'listClassName',
