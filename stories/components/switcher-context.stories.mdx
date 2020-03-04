@@ -1,12 +1,11 @@
 import { Meta, Props } from '@storybook/addon-docs/blocks';
 import PropTypes from 'prop-types';
 
-import { LanguageContext } from 'components';
-import { DEFAULT_ISO_LANGUAGE } from 'const';
+import { SwitcherContext } from 'context';
 
-<Meta title="Components/LanguageContext" />
+<Meta title="Components/SwitcherContext" />
 
-# LanguageContext
+# SwitcherContext
 
 A Context component, that creates a new `React.Context` object, used for storing the language data for use by other components.
 
@@ -23,13 +22,13 @@ provides some good defaults!
 Provider component allows other components to subscribe to language changes.
 
 ```tsx
-<LanguageContext.Provider />
+<SwitcherContext.Provider />
 ```
 
 Consumer component allows a specific component to subscribe to language changes on the Provider.
 
 ```tsx
-<LanguageContext.Consumer />
+<SwitcherContext.Consumer />
 ```
 
 ## Providing Context
@@ -37,7 +36,7 @@ Consumer component allows a specific component to subscribe to language changes 
 ```tsx
 const [language, setLanguage] = useState('en');
 
-<LanguageContext.Provider
+<SwitcherContext.Provider
   value={{
     language,
     setLanguage,
@@ -45,27 +44,27 @@ const [language, setLanguage] = useState('en');
   }}
 >
   {children}
-</LanguageContext.Provider>;
+</SwitcherContext.Provider>;
 ```
 
 ## Consuming Context
 
-### useLanguageContext()
+### useSwitcherContext()
 
 The optimal way of consuming the language context is the provided hook
 
 ```tsx
-const { language, languageList, setLanguage } = useLanguageContext();
+const { language, languageList, setLanguage } = useSwitcherContext();
 ```
 
-### LanguageContext.Consumer
+### SwitcherContext.Consumer
 
-You can also use the LanguageContext.Consumer component if you prefer that way.
+You can also use the SwitcherContext.Consumer component if you prefer that way.
 
 ```tsx
-<LanguageContext.Consumer>
+<SwitcherContext.Consumer>
   {({ language, languageList, setLanguage }) => ({ children })}
-</LanguageContext.Consumer>
+</SwitcherContext.Consumer>
 ```
 
 ## Props
@@ -78,7 +77,7 @@ You can also use the LanguageContext.Consumer component if you prefer that way.
         description: 'string',
         type: PropTypes.string,
         required: true,
-        defaultValue: { summary: DEFAULT_ISO_LANGUAGE },
+        defaultValue: { summary: 'en' },
       },
       {
         name: 'languageList',

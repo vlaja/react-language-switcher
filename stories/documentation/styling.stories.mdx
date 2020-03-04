@@ -1,6 +1,7 @@
 import { Meta, Preview, Props } from '@storybook/addon-docs/blocks';
 
-import { LanguageProvider, Switcher } from 'components';
+import { LanguageSwitcher } from 'middleware/language';
+import { SwitcherProvider } from 'provider';
 
 <Meta title="Documentation/Styling" />
 
@@ -30,9 +31,9 @@ It will render a list in the following html format:
 ### Result
 
 <Preview withSource="none">
-  <LanguageProvider config={{ languageList: ['en', 'de', 'fr'] }}>
-    <Switcher />
-  </LanguageProvider>
+  <SwitcherProvider>
+    <LanguageSwitcher languageList={['en', 'de', 'fr']} />
+  </SwitcherProvider>
 </Preview>
 
 ## Applying custom styling
@@ -46,7 +47,8 @@ You can style the component in 3 ways.
 There are 5 separate class properties that you can override, visible in the example below.
 
 ```tsx
-<Switcher
+<LanguageSwitcher
+  languageList={['en', 'de', 'fr']}
   containerClassName="language-switcher"
   listClassName="language-switcher__list"
   itemClassName="language-switcher__item"
@@ -61,7 +63,9 @@ This approach will keep the default component elements, and apply your classes t
 <div class="language-switcher">
   <ul class="language-switcher__list">
     <li class="language-switcher__item">
-      <button class="language-switcher__button language-switcher__button--active">
+      <button
+        class="language-switcher__button language-switcher__button--active"
+      >
         default language
       </button>
     </li>
@@ -79,15 +83,16 @@ This approach will keep the default component elements, and apply your classes t
 There are 4 separate component properties that you can override.
 
 ```tsx
-<LanguageProvider>
-  <Switcher
+<SwitcherProvider>
+  <LanguageSwitcher
+    languageList={['en', 'de', 'fr']}
     containerClassName="language-switcher"
     containerComponent={Container}
     listComponent={List}
     itemComponent={Item}
     buttonComponent={Button}
   />
-</LanguageProvider>
+</SwitcherProvider>
 ```
 
 This approach will keep the default component elements, and apply your classes to produce a result like this:
@@ -96,7 +101,9 @@ This approach will keep the default component elements, and apply your classes t
 <div class="language-switcher">
   <ul class="language-switcher__list">
     <li class="language-switcher__item">
-      <button class="language-switcher__button language-switcher__button--active">
+      <button
+        class="language-switcher__button language-switcher__button--active"
+      >
         default language
       </button>
     </li>
@@ -111,7 +118,7 @@ This approach will keep the default component elements, and apply your classes t
 
 ## Props
 
-<Props of={Switcher} />
+<Props of={LanguageSwitcher} />
 
 # Support
 

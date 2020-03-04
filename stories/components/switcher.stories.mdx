@@ -1,12 +1,13 @@
 import { Meta, Preview, Props } from '@storybook/addon-docs/blocks';
 
-import { LanguageProvider, Switcher } from 'components';
+import { SwitcherProvider } from 'provider';
+import { LanguageSwitcher } from 'middleware/language';
 
-<Meta title="Components/Switcher" />
+<Meta title="Components/LanguageSwitcher" />
 
 # Switcher
 
-One of the key features of the `react-language-switcher` package is its flexibility when it comes to styling the `<Switcher />` component.
+One of the key features of the `react-language-switcher` package is its flexibility when it comes to styling the `<LanguageSwitcher />` component.
 
 It is possible to override the `className` prop for each element, or override the whole component for each element separately, as well as mix and match these combinations.
 
@@ -30,42 +31,44 @@ It will render a list in the following html format:
 ### Result
 
 <Preview withSource="none">
-  <LanguageProvider config={{ languageList: ['en', 'de', 'fr'] }}>
-    <Switcher />
-  </LanguageProvider>
+  <SwitcherProvider>
+    <LanguageSwitcher languageList={['en', 'de', 'fr']} />
+  </SwitcherProvider>
 </Preview>
 
 ## Preview
 
 <Preview withSource="none">
-  <LanguageProvider config={{ languageList: ['en', 'de', 'fr'] }}>
-    <Switcher
+  <SwitcherProvider>
+    <LanguageSwitcher
+      languageList={['en', 'de', 'fr']}
       containerClassName="language-switcher"
       listClassName="language-switcher__list"
       itemClassName="language-switcher__item"
       buttonClassName="language-switcher__button"
       buttonActiveClassName="language-switcher__button--active"
     />
-  </LanguageProvider>
+  </SwitcherProvider>
 </Preview>
 
 ## Usage
 
 ```tsx
-<LanguageProvider>
-  <Switcher
+<SwitcherProvider>
+  <LanguageSwitcher
+    languageList={['en', 'de', 'fr']}
     containerClassName="language-switcher"
     listClassName="language-switcher__list"
     itemClassName="language-switcher__item"
     buttonClassName="language-switcher__button"
     buttonActiveClassName="language-switcher__button--active"
   />
-</LanguageProvider>
+</SwitcherProvider>
 ```
 
 ## Props
 
-<Props of={Switcher} />
+<Props of={LanguageSwitcher} />
 
 # Support
 
