@@ -1,11 +1,13 @@
 import React from 'react';
 
-import { useLanguageContext } from 'hooks';
-
 import { SwitcherButton } from './SwitcherButton';
 import { SwitcherElement } from './SwitcherElement';
+import { useSwitcherSelector } from './useSwitcherSelector';
 
-interface SwitcherProps {
+export interface SwitcherProps {
+  valueSelector: string;
+  listSelector: string;
+  handlerSelector: string;
   containerClassName?: string;
   containerComponent?: React.ComponentType;
   listClassName?: string;
@@ -15,10 +17,12 @@ interface SwitcherProps {
   buttonClassName?: string;
   buttonActiveClassName?: string;
   buttonComponent?: React.ComponentType;
-  customSelector?: () => string[];
 }
 
 export const Switcher: React.FC<SwitcherProps> = ({
+  valueSelector,
+  listSelector,
+  handlerSelector,
   containerClassName,
   containerComponent,
   listClassName,
@@ -28,14 +32,14 @@ export const Switcher: React.FC<SwitcherProps> = ({
   buttonClassName,
   buttonActiveClassName,
   buttonComponent,
-  customSelector,
 }) => {
-  const { languageList } = useLanguageContext();
+  const { listValues, ...rest } = useSwitcherSelector(
+    valueSelector,
+    listSelector,
+    handlerSelector
+  );
 
-  let values = languageList;
-  if (customSelector) {
-    values = customSelector() || values;
-  }
+  console.log(rest);
 
   return (
     <SwitcherElement
@@ -47,17 +51,18 @@ export const Switcher: React.FC<SwitcherProps> = ({
         component={listComponent || 'ul'}
         className={listClassName}
       >
-        {values.map(value => (
+        {listValues.map(value => (
           <SwitcherElement
             key={value}
             component={itemComponent || 'li'}
             className={itemClassName}
           >
             <SwitcherButton
-              lang={value}
               component={buttonComponent || 'button'}
               className={buttonClassName}
               activeClassName={buttonActiveClassName}
+              value={value}
+              {...rest}
             />
           </SwitcherElement>
         ))}

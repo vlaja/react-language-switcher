@@ -1,6 +1,7 @@
 import { Meta, Preview, Props } from '@storybook/addon-docs/blocks';
 
-import { Switcher, LanguageProvider } from 'components';
+import { LanguageSwitcher } from 'middleware/language';
+import { SwitcherProvider } from 'provider';
 
 import './css/styles.css';
 
@@ -15,35 +16,37 @@ You can easily style `<Switcher />` component by overriding the optional **class
 ## Preview
 
 <Preview withSource="none">
-  <LanguageProvider config={{ languageList: ['en', 'de', 'fr'] }}>
-    <Switcher
+  <SwitcherProvider>
+    <LanguageSwitcher
+      languageList={['en', 'de', 'fr']}
       containerClassName="language-switcher"
       listClassName="language-switcher__list"
       itemClassName="language-switcher__item"
       buttonClassName="language-switcher__button"
       buttonActiveClassName="language-switcher__button--active"
     />
-  </LanguageProvider>
+  </SwitcherProvider>
 </Preview>
 
 ## Usage
 
 ```tsx
-<LanguageProvider config={{ languageList: ['en', 'de', 'fr'] }}>
-  <Switcher
+<SwitcherProvider>
+  <LanguageSwitcher
+    languageList={['en', 'de', 'fr']}
     containerClassName="language-switcher"
     listClassName="language-switcher__list"
     itemClassName="language-switcher__item"
     buttonClassName="language-switcher__button"
     buttonActiveClassName="language-switcher__button--active"
   />
-</LanguageProvider>
+</SwitcherProvider>
 ```
 
 ## Props
 
 <Props
-  of={Switcher}
+  of={LanguageSwitcher}
   exclude={[
     'containerComponent',
     'listComponent',

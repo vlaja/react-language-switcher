@@ -1,7 +1,8 @@
 import { StyleSheet, css } from 'aphrodite/no-important';
 import { Meta, Preview, Props } from '@storybook/addon-docs/blocks';
 
-import { Switcher, LanguageProvider } from 'components';
+import { LanguageSwitcher } from 'middleware/language';
+import { SwitcherProvider } from 'provider';
 
 export const borderBottom = '3px solid white';
 export const fontFamily =
@@ -53,35 +54,37 @@ Styling with Aphrodite
 ## Preview
 
 <Preview withSource="none">
-  <LanguageProvider config={{ languageList: ['en', 'de', 'fr'] }}>
-    <Switcher
+  <SwitcherProvider>
+    <LanguageSwitcher
+      languageList={['en', 'de', 'fr']}
       containerClassName={css(styles.container)}
       listClassName={css(styles.list)}
       itemClassName={css(styles.item)}
       buttonClassName={css(styles.button)}
       buttonActiveClassName={css(styles.active)}
     />
-  </LanguageProvider>
+  </SwitcherProvider>
 </Preview>
 
 ## Usage
 
 ```tsx
-<LanguageProvider config={{ languageList: ['en', 'de', 'fr'] }}>
-  <Switcher
+<SwitcherProvider>
+  <LanguageSwitcher
+    languageList={['en', 'de', 'fr']}
     containerClassName={css(styles.container)}
     listClassName={css(styles.list)}
     itemClassName={css(styles.item)}
     buttonClassName={css(styles.button)}
     buttonActiveClassName={css(styles.active)}
   />
-</LanguageProvider>
+</SwitcherProvider>
 ```
 
 ## Props
 
 <Props
-  of={Switcher}
+  of={LanguageSwitcher}
   exclude={[
     'containerComponent',
     'listComponent',
