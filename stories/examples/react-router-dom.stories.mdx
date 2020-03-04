@@ -1,0 +1,90 @@
+import { Meta, Preview, Props } from '@storybook/addon-docs/blocks';
+import { BrowserRouter, Link } from 'react-router-dom';
+
+import { LanguageSwitcher } from 'middleware/language';
+import { SwitcherProvider } from 'provider';
+
+import styles from './css/styles.module.css';
+
+<Meta title="Examples/middleware/react-router-dom" />
+
+export const View = ({ text }) => (
+  <section className={styles.page}>{text}</section>
+);
+
+export const middlewareConfig = {
+  routerComponent: BrowserRouter,
+  rewrites: {
+    '/iframe.html': '/',
+  },
+  routes: {
+    en: {
+      'route.home': {
+        title: 'Home',
+        path: '/',
+        component: <View>Welcome to the Home page</View>,
+      },
+      'route.contact': {
+        title: 'Contact',
+        path: '/contact',
+        component: <View>Welcome to the Contact page</View>,
+      },
+    },
+    de: {
+      'route.home': {
+        title: 'Startseite',
+        path: '/de',
+        component: <View>Willkommen auf der Homepage</View>,
+      },
+      'route.contact': {
+        title: 'Kontakt',
+        path: '/kontakt',
+        component: <View>Willkommen auf der Kontaktseite</View>,
+      },
+    },
+    fr: {
+      'route.home': {
+        title: 'Accueil',
+        path: '/fr',
+        component: <View>Bienvenue sur la page d'accueil</View>,
+      },
+      'route.contact': {
+        title: 'Contact',
+        path: '/le-contact',
+        component: <View>Bienvenue sur la page Contact</View>,
+      },
+    },
+  },
+};
+
+# React Router middleware
+
+**ReactRouterMiddleware** component allows the language switcher to localize routes and call navigation actions when language is changed, for example:
+
+- navigating to the same article in another language
+
+## Preview
+
+<Preview withSource="none">
+  <SwitcherProvider>
+    <header className={styles.header}>
+      {/* <Switcher
+          selector="routes"
+          containerClassName={styles.container}
+          listClassName={styles.list}
+          itemClassName={styles.item}
+          buttonClassName={styles.button}
+          buttonActiveClassName={styles.active}
+        /> */}
+      <LanguageSwitcher
+        languageList={['en', 'de', 'fr']}
+        containerClassName={styles.container}
+        listClassName={styles.list}
+        itemClassName={styles.item}
+        buttonClassName={styles.button}
+        buttonActiveClassName={styles.active}
+      />
+    </header>
+    <main></main>
+  </SwitcherProvider>
+</Preview>
